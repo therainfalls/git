@@ -1,0 +1,13 @@
+ssh -T git@github.com
+提示ssh: connect to host github.com port 22: Connection timed out
+cd ~/.ssh
+ls  如果id_rsa.pub id_rsa这两个文件存在
+在新增config文件
+
+Host github.com
+User 注册github的邮箱
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+保存即可
